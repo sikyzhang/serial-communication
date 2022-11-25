@@ -1,5 +1,8 @@
 #include "CommunicatorDialog.h"
 
+using namespace itas109;
+using namespace std;
+
 CommunicatorDialog::CommunicatorDialog() {
     // 窗口基础设置
     this->setWindowTitle("串口通讯");

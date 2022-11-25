@@ -37,9 +37,6 @@
 #define imsleep(microsecond) usleep(1000 * microsecond) // ms
 #endif
 
-using namespace itas109;
-using namespace std;
-
 const char HINT_NO_FILE[] = "找不到文件，请先选择文件";
 const char HINT_FIND_FILE[] = "找到文件：";
 const char HINT_NEED_LOADING[] = "点击右上方按钮加载图片";
@@ -72,12 +69,12 @@ private:
     vector<SerialPortInfo> serialPortInfos; // 记录串口列表
     static const int BUFFER_SIZE = 4096;
     static const int BAUD_RATE = 9600;
-    static const Parity PARITY = itas109::ParityNone;
-    static const DataBits DATA_BITS = itas109::DataBits8;
-    static const StopBits STOP_BITS = itas109::StopOne;
-    static const FlowControl FLOW_CONTROL = itas109::FlowNone;
+    static const itas109::Parity PARITY = itas109::ParityNone;
+    static const itas109::DataBits DATA_BITS = itas109::DataBits8;
+    static const itas109::StopBits STOP_BITS = itas109::StopOne;
+    static const itas109::FlowControl FLOW_CONTROL = itas109::FlowNone;
     int curSerialIdx{};
-    CSerialPort curSerialPort;
+    itas109::CSerialPort curSerialPort;
     map<string, string> commandsMap;
 
     void refreshSerialList(); // 刷新串口列表
