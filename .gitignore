@@ -1,0 +1,5 @@
+# cmake 构建目录
+/cmake-*/
+
+# 软件临时打包目录
+/release-portable/
